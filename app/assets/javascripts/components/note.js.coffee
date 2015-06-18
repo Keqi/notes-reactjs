@@ -1,7 +1,8 @@
 @Note = React.createClass
   render: ->
-    <div className="panel panel-default">
-      <div className="panel-body">
+    <li>
+      <a href="#">
+        <h2>{@props.note.title}</h2>
         <p>{@props.note.body}</p>
-      </div>
-    </div>
+      </a>
+    </li>
