@@ -3,6 +3,12 @@
     notes: @props.notes
     hex: @props.hex
 
+  deleteNote: (note) ->
+    notes = @state.notes.slice()
+    index = notes.indexOf note
+    notes.splice index, 1
+    @replaceState notes: notes
+
   addNote: (note) ->
     notes = @state.notes.slice()
     notes.push note
@@ -13,8 +19,8 @@
       <div className="notes">
         <ul>
           {
-            @state.notes.map (note) ->
-              <Note id={note.id} note={note}/>
+            @state.notes.map (note) =>
+              <Note note={note} handleDeleteNote={@deleteNote}/>
           }
         </ul>
       </div>

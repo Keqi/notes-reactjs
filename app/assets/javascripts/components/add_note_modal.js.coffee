@@ -12,7 +12,6 @@
 
   handleSubmit: (e) ->
     e.preventDefault()
-    console.log(e.target)
     $.post '/notes', { hex: @state.hex, note: { title: @state.title, body: @state.body } }, (data) =>
       @props.handleNewNote data
       @setState @getInitialState()

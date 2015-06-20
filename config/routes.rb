@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root 'boards#index'
 
   get 'boards/:hex', to: 'boards#show'
-  resources :notes, only: :create
+  resources :notes, only: [:create, :destroy]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
