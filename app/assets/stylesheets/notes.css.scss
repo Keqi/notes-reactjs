@@ -44,6 +44,10 @@
     float: right;
     font-size: 200%
   }
+
+  i.fa:hover {
+    color: red;
+  }
 }
 
 ul li:nth-child(even) a{
