@@ -3,6 +3,10 @@ class Board < ActiveRecord::Base
 
   before_create :generate_hex
 
+  def to_param
+    hex
+  end
+
   private
 
   def generate_hex

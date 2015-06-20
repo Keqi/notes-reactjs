@@ -4,8 +4,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'boards#index'
-
-  get 'boards/:hex', to: 'boards#show'
+  resources :boards, only: [:show, :index, :create]
   resources :notes, only: [:create, :destroy]
 
   # Example of regular route:
