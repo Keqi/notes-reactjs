@@ -1,0 +1,20 @@
+#add-note{
+  p{
+    color: black;
+  }
+  .modal-content{
+    text-decoration:none;
+    color:#000;
+    background: $note-color;
+    display:block;
+    height:40em;
+    width:40em;
+    padding:1em;
+  }
+
+  input, textarea, input:focus, textarea:focus{
+    background: $note-color;
+    border-color: $note-color;
+    box-shadow: 0 0 5px $note-color;
+  }
+}

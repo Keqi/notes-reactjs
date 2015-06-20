@@ -20,7 +20,7 @@
   ul li a{
     text-decoration:none;
     color:#000;
-    background:#ffc;
+    background: $note-color;
     display:block;
     height:20em;
     width:20em;
@@ -71,7 +71,7 @@ ul li:nth-child(5n) a{
 
 ul li a:hover,ul li a:focus{
   -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
-  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+  -webkit-box-shadow: 10px 7px 10px rgba(0,0,0,.7);
   box-shadow:10px 10px 7px rgba(0,0,0,.7);
   -webkit-transform: scale(1.25);
   -moz-transform: scale(1.25);

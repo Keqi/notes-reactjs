@@ -3,11 +3,13 @@
     notes: @props.notes
 
   render: ->
-    <div className="notes">
-      <ul>
-        {
-          @state.notes.map (note) ->
-            <Note id={note.id} note={note}/>
-        }
-      </ul>
+    <div className="board">
+      <div className="notes">
+        <ul>
+          {
+            @state.notes.map (note) ->
+              <Note id={note.id} note={note}/>
+          }
+        </ul>
+      </div>
     </div>

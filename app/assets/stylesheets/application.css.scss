@@ -1,13 +1,16 @@
+$note-color: #ffc;
 $panel-bg: #EDE139;
+$input-border-focus: $note-color;
+$modal-footer-border-color: $note-color;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "notes";
+@import "add_note";
 
 body{
   font-family:arial,sans-serif;
   font-size:100%;
-  margin:3em;
   background:#666;
   color:#fff;
 }
