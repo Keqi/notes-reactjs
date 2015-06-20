@@ -7,9 +7,13 @@ $modal-footer-border-color: $note-color;
 @import "bootstrap";
 @import "notes";
 @import "add_note";
+@font-face {
+  font-family: "Reenie Beanie";
+  src: url("/assets/ReenieBeanie.ttf") format("truetype");
+}
 
 body{
-  font-family:arial,sans-serif;
+  font-family:"Reenie Beanie",arial,sans-serif;
   font-size:100%;
   background:#666;
   color:#fff;

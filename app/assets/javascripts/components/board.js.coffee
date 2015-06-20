@@ -1,6 +1,12 @@
 @Board = React.createClass
   getInitialState: ->
     notes: @props.notes
+    hex: @props.hex
+
+  addNote: (note) ->
+    notes = @state.notes.slice()
+    notes.push note
+    @setState notes: notes
 
   render: ->
     <div className="board">
@@ -12,4 +18,5 @@
           }
         </ul>
       </div>
+      <AddNoteModal hex={@state.hex} handleNewNote={@addNote}/>
     </div>

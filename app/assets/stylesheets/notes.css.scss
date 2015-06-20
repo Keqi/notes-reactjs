@@ -1,8 +1,3 @@
-@font-face {
-  font-family: "Springtime Blues";
-  src: url("/assets/Springtime-Blues.ttf") format("truetype");
-}
-
 .notes {
   h2, p{
     font-size:100%;
@@ -42,7 +37,6 @@
     padding-bottom:10px;
   }
   ul li p{
-    font-family:"Springtime Blues",arial,sans-serif;
     font-size:180%;
   }
 }

@@ -12,9 +12,13 @@
     padding:1em;
   }
 
+  textarea { resize: none; }
+  input { font-weight: bold; }
+
   input, textarea, input:focus, textarea:focus{
     background: $note-color;
     border-color: $note-color;
     box-shadow: 0 0 5px $note-color;
+    font-size: 180%;
   }
 }
