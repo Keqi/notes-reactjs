@@ -2,10 +2,12 @@
   *= require font-awesome
 */
 
-$note-color: #ffc;
+$note-yellow: #ffc;
+$note-blue:#1DB6F2;
+$note-red:#F2361D;
 $panel-bg: #EDE139;
-$input-border-focus: $note-color;
-$modal-footer-border-color: $note-color;
+$input-border-focus: $note-yellow;
+$modal-footer-border-color: $note-yellow;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";

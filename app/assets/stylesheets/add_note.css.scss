@@ -5,7 +5,7 @@
   .modal-content{
     text-decoration:none;
     color:#000;
-    background: $note-color;
+    background: $note-yellow;
     display:block;
     height:40em;
     width:40em;
@@ -16,9 +16,9 @@
   input { font-weight: bold; }
 
   input, textarea, input:focus, textarea:focus{
-    background: $note-color;
-    border-color: $note-color;
-    box-shadow: 0 0 5px $note-color;
+    background: $note-yellow;
+    border-color: $note-yellow;
+    box-shadow: 0 0 5px $note-yellow;
     font-size: 180%;
   }
 }

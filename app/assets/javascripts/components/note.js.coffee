@@ -11,6 +11,9 @@
   render: ->
     <li>
       <a href="#">
+        <i className="fa fa-file" id="red"></i>
+        <i className="fa fa-file" id="yellow"></i>
+        <i className="fa fa-file" id="blue"></i>
         <i className="fa fa-trash-o" onClick={@handleDelete}></i>
         <h2>{@props.note.title}</h2>
         <p>{@props.note.body}</p>
