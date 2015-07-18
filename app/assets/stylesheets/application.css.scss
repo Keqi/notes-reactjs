@@ -17,7 +17,7 @@ $modal-footer-border-color: $note-yellow;
 @import "font-awesome";
 @font-face {
   font-family: "Reenie Beanie";
-  src: url("/assets/ReenieBeanie.ttf") format("truetype");
+  src: font-url("ReenieBeanie.ttf") format("truetype");
 }
 
 body{
