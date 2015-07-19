@@ -12,7 +12,7 @@
 
   handleSubmit: (e) ->
     e.preventDefault()
-    $.post '/notes', { hex: @state.hex, note: { title: @state.title, body: @state.body } }, (data) =>
+    $.post '/notes', { hex: @state.hex, note: { title: @state.title, body: @state.body, colour: "#ffc" } }, (data) =>
       @props.handleNewNote data
       @setState @getInitialState()
     , 'JSON'

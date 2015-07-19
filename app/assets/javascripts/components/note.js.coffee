@@ -1,11 +1,7 @@
 @Note = React.createClass
   getInitialState: ->
     note: @props.note
-    colours:
-      red: "#F2361D"
-      blue: "#1DB6F2"
-      yellow: "#ffc"
-      purple: "#E88BD7"
+    colours: Colours.data();
 
   handleDelete: (e) ->
     e.preventDefault()
@@ -20,7 +16,7 @@
     $.ajax
       method: 'PUT'
       url: "/notes/#{ @state.note.id }"
-      data: { note: { colour: @state.colours[e.target.id] } }
+      data: { note: { colour: e.target.id } }
       dataType: 'JSON'
 
       @setState
@@ -28,15 +24,15 @@
           id: @state.note.id
           title: @state.note.title
           body: @state.note.body
-          colour: @state.colours[e.target.id]
+          colour: e.target.id
 
   render: ->
     <li>
       <a href="#" style={{background: @state.note.colour;}}>
-        <i className="fa fa-file" id="red" onClick={@updateColor}></i>
-        <i className="fa fa-file" id="yellow" onClick={@updateColor}></i>
-        <i className="fa fa-file" id="blue" onClick={@updateColor}></i>
-        <i className="fa fa-file" id="purple" onClick={@updateColor}></i>
+        {
+          @state.colours.validColours(@state.note.colour).map (colour) =>
+            <i className="fa fa-file" id={colour} style={{color: colour;}} onClick={@updateColor}></i>
+        }
         <i className="fa fa-trash-o" onClick={@handleDelete}></i>
         <h2>{@state.note.title}</h2>
         <p>{@state.note.body}</p>

@@ -17,5 +17,6 @@
 //= require react
 //= require react_ujs
 //= require lodash
+//= require colours
 //= require components
 //= require_tree .

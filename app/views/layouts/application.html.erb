@@ -7,8 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= react_component('Navbar') %>
-
+<% if @board %>
+  <%= react_component('Navbar') %>
+<% end %>
 <%= yield %>
 
 </body>

@@ -1,7 +1,7 @@
 class BoardsController < ApplicationController
   def show
     @board = Board.find_by(hex: params[:id])
-    @notes = @board ? @board.notes : []
+    @notes = @board ? @board.notes.order("created_at ASC") : []
   end
 
   def index
