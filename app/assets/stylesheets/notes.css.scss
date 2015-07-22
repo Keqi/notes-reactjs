@@ -31,6 +31,13 @@
     -moz-transform:rotate(-6deg);
   }
 
+  ul li a#new_note{
+    text-align:center; /* center horizontally */
+
+    p { font-size: 500%; }
+    h2 { font-size: 150%; }
+  }
+
   ul li h2{
     font-size:120%;
     font-weight:bold;

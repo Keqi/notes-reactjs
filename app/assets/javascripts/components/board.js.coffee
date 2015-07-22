@@ -18,6 +18,7 @@
     <div className="board">
       <div className="notes">
         <ul>
+          <NewNote/>
           {
             @state.notes.map (note) =>
               <Note note={note} handleDeleteNote={@deleteNote}/>
