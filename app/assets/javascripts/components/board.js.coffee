@@ -7,7 +7,7 @@
     notes = @state.notes.slice()
     index = notes.indexOf note
     notes.splice index, 1
-    @replaceState notes: notes
+    @setState notes: notes
 
   updateColor: (note, colour) ->
     notes = @state.notes.slice()
@@ -15,7 +15,7 @@
       n.colour = colour if n == note
       n
     )
-    @replaceState notes: notes
+    @setState notes: notes
 
   addNote: (note) ->
     notes = @state.notes.slice()
@@ -29,7 +29,7 @@
           <NewNote/>
           {
             @state.notes.map (note) =>
-              <Note note={note} handleDeleteNote={@deleteNote} handleUpdateColor={@updateColor}/>
+              <Note note={note} hex={@state.hex} handleDeleteNote={@deleteNote} handleUpdateColor={@updateColor}/>
           }
         </ul>
       </div>

@@ -7,6 +7,7 @@
     $.ajax
       method: 'DELETE'
       url: "/notes/#{ @props.note.id }"
+      data: { hex: @props.hex }
       dataType: 'JSON'
       success: () =>
         @props.handleDeleteNote @props.note
@@ -15,7 +16,7 @@
     $.ajax
       method: 'PUT'
       url: "/notes/#{ @props.note.id }"
-      data: { note: { colour: e.target.id } }
+      data: { hex: @props.hex, note: { colour: e.target.id } }
       dataType: 'JSON'
       success: (data) =>
         @props.handleUpdateColor @props.note, data.colour

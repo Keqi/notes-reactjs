@@ -1,4 +1,6 @@
 class NotesController < ApplicationController
+  before_action :authorize_with_hex, only: [:update, :destroy]
+
   def create
     @board = Board.find_by(hex: params[:hex])
     @note = Note.new(note_params)
@@ -26,6 +28,14 @@ class NotesController < ApplicationController
   end
 
   private
+
+  def authorize_with_hex
+    render text: "Unprocessable entity" unless note.board.hex == params[:hex]
+  end
+
+  def note
+    @note ||= Note.find(params[:id])
+  end
 
   def note_params
     params.require(:note).permit(:title, :body, :colour)
